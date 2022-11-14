@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+</head>
+<body>
+    
+    <form>
+        <h1>DADOS PESSOAIS DO CANDIDATO</h1>
+        <fieldset>
+            <legend>Cadastro</legend>
+            <div class="flexHorizontal">
+                <div>
+                    <label for="nomeUsuario">Nome completo:</label>
+                    <input type="text" id="nomeUsuario" name="nomeUsuario" required>
+                </div>
+
+                <div>
+                    <label for="estadoCivil">Estado civil:</label>
+                    <select name="estadoCivil" id="estadoCivil" required>
+                        <option value="">Selecione seu estado civil</option>
+                        <option value="1">Solteiro(a)</option>
+                        <option value="2">Casado(a)</option>
+                        <option value="3">Divorciado(a)</option>
+                        <option value="4">Viúvo(a)</option>
+                        <option value="5">Separado(a)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flexHorizontal">
+                <div>
+                    <label for="emailUsuario">E-mail:</label>
+                    <input type="email" name="emailUsuario" id="emailUsuario" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="" required>
+                </div>
+
+                <div>
+                    <label for="telefoneUsuario">Telefone (opcional): </label>
+                    <input type="tel" name="telefoneUsuario" id="telefoneUsuario" ng-pattern="/^\([1-9]{2}\)[0-9]{4,5}-[0-9]{4}$/" placeholder="">
+                </div>
+            </div>
+
+            <div>
+                <p class="textoCentralizado">Preferência de Contato</p>
+                    
+                <div class="flexCentral">
+                    <div>
+                        <input type="radio" name="preferenciaContato" id="contatoPorEmail">
+                        <label for="contatoPorEmail" class="labelInline">E-mail</label>
+                    </div>
+                        
+                    <div>
+                        <input type="radio" name="preferenciaContato" id="contatoPorTelefone">
+                        <label for="contatoPorTelefone" class="labelInline">Telefone</label>
+                    </div>
+                </div>
+            </div>
+        </fieldset> 
+
+        <fieldset class="flexVertical"> 
+            <legend>Endereço</legend>
+            
+            <div class="flexHorizontal"> 
+                <div> 
+                    <label for="logradouroUsuario">Logradouro:</label>
+                    <input type="text" name="logradouroUsuario" id="logradouroUsuario" required>
+                </div>
+                <div>
+                    <label for="numeroCasaUsuario">Número:</label>
+                    <input type="number" name="numeroCasaUsuario" id="numeroCasaUsuario" required>
+                </div>
+            </div> 
+
+            <div class="flexHorizontal"> 
+                <div>
+                    <label for="bairroUsuario">Bairro (opcional):</label>
+                    <input type="text" name="bairroUsuario" id="bairroUsuario">
+                </div>
+                <div>
+                    <label for="cidadeUsuario">Cidade:</label>
+                    <input type="text" name="cidadeUsuario" id="cidadeUsuario" required>
+                </div> 
+            </div> 
+
+            <div class="flexHorizontal">
+                <div>
+                    <label for="estadoUsuario">Estado:</label>
+
+                    
+                    <select name="estadoUsuario" id="estadoUsuario">
+                        <option value="">Selecione seu Estado</option> 
+                        <option value="acre">AC</option>
+                        <option value="alagoas">AL</option>
+                        <option value="amazonas">AM</option>
+                        <option value="amapa">AP</option>
+                        <option value="bahia">BA</option>
+                        <option value="ceara">CE</option>
+                        <option value="distritoFederal">DF</option>
+                        <option value="espiritoSanto">ES</option>
+                        <option value="goias">GO</option>
+                        <option value="maranhao">MA</option>
+                        <option value="minasGerais">MG</option>
+                        <option value="matoGrossoDoDul">MS</option>
+                        <option value="matoGrosso">MT</option>
+                        <option value="para">PA</option>
+                        <option value="paraiba">PB</option>
+                        <option value="pernambuco">PE</option>
+                        <option value="piaui">PI</option>
+                        <option value="parana">PR</option>
+                        <option value="rioDeJaneiro">RJ</option>
+                        <option value="rioGrandeDoNorte">RN</option>
+                        <option value="rondonia">RO</option>
+                        <option value="roraima">RR</option>
+                        <option value="rioGrandeDoSul">RS</option>
+                        <option value="santaCatarina">SC</option>
+                        <option value="sergipe">SE</option>
+                        <option value="saoPaulo">SP</option>
+                        <option value="tocantins">TO</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cepUsuario">CEP:</label>
+                    <input type="text" name="cepUsuario" id="cepUsuario" pattern="[0-9]{5}-[0-9]{3}$" placeholder="" required>
+                </div>
+            </div>
+        </fieldset> 
+
+        <div>
+            <input type="checkbox" name="liConcordo" id="liConcordo">
+            <label for="liConcordo" class="labelInline">Li e concordo</label>
+        </div>
+        
+        
+        <div class="flexHorizontal">
+            <button id="botaoEnviar" type="submit">Enviar</button>
+            <button id="botaoLimpar" type="reset">Limpar</button>
+        </div>
+    </form>
+
+</body>
+</html>

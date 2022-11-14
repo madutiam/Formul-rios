@@ -1,0 +1,71 @@
+body {
+    color: rgb(0, 0, 0);
+    background: rgb(124, 42, 149);
+    background: linear-gradient(184deg, rgb(145, 42, 149) 0%, rgb(230, 167, 255) 90%);
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+
+}
+
+h1{
+    color:azure;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.flexVertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+fieldset {
+    border: solid rgb(255, 255, 255) 1px;
+    padding: none;
+    border-radius: 50px;
+}   
+
+div {
+    margin: 10px;
+}
+
+label {
+    display: block;
+}
+
+label.labelInline {
+    display: inline;
+}
+
+input, button {
+    outline: none;
+}
+
+input {
+    border: 1px solid rgb(0, 0, 0);
+    transition: border 0.25s linear;
+    border-radius: 5px;
+}
+
+select {
+    border: 1px solid rgb(0, 0, 0);
+    transition: border 0.25s linear;
+    border-radius: 5px;
+}
+
+input:hover,
+input:focus,
+select:hover,
+select:focus {
+    border: rgb(255, 255, 255) 3px solid;
+}
+
+button {
+    transition: box-shadow 0.25s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    
+    box-shadow: 2px 2px 2px 0 #000000;
+}
